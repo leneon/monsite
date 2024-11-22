@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{front-office/layout/auth.html}">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${appName} + ' - ' + ${title}">Site</title>
+    <style>
+        .truncate-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Nombre de lignes à afficher */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .blog-date {
+            font-size: 14px;
+            color: #6c757d; /* Couleur de texte par défaut */
+        }
+        .blog-date i {
+            font-size: 16px;
+        }
+        .blog-date span {
+            margin-left: 4px;
+        }
+        </style>
+
+<body >
+    <div layout:fragment="content" ng-controller="unAuthController">
+        <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row no-gutters slider-text align-items-center justify-content-center">
+                    <div class="col-md-9 ftco-animate text-center">
+                        <h1 class="mb-2 bread">À propos de nous</h1>
+                        <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Accueil <i class="ion-ios-arrow-forward"></i></a></span> <span>À propos de nous <i class="ion-ios-arrow-forward"></i></span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="ftco-section">
+            <div class="container">
+                <div class="row d-flex">
+                    <div class="col-md-5 order-md-last wrap-about align-items-stretch">
+                        <div class="wrap-about-border">
+                            <div class="img" style="background-image: url(images/about.jpg); border-radius: 5px;"></div>
+                            <div class="text">
+                                <h3>Lisez notre histoire de succès pour inspiration</h3>
+                                <p>Au loin, derrière les montagnes de mots, loin des pays de Vokalia et Consonantia, vivent les textes aveugles. Séparés, ils vivent dans Bookmarksgrove, juste au bord de la sémantique, un grand océan linguistique.</p>
+                                <p><a href="#" class="btn btn-primary py-3 px-4">Contactez-nous</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="col-md-7 wrap-about pr-md-4 ftco-animate">
+                        <h2 class="mb-4">Bienvenue chez <span>{{structureDto.nom}}</span></h2>
+                        <p ng-bind-html="structureDto.description"></p>
+                    </div> -->
+                    <div class="col-md-7 wrap-about pr-md-4 ftco-animate">
+                        <h2 class="mb-4">Nos principaux services</h2>
+                        <p>Nous offrons des solutions sur mesure pour chaque événement, qu'il soit professionnel ou privé, tout en garantissant une communication impactante.</p>
+                        <div class="row mt-5">
+                          <div class="col-lg-6">
+                            <div class="services active text-center">
+                              <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-collaboration"></span></div>
+                              <div class="text media-body">
+                                <h3>Événementiel</h3>
+                                <p class="truncate-text">Organisation et gestion d'événements mémorables pour marquer les esprits. Nous nous chargeons des conférences, séminaires, mariages, festivals et soirées d'entreprise.</p>
+                              </div>
+                            </div>
+                            <div class="services text-center">
+                              <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-analysis"></span></div>
+                              <div class="text media-body">
+                                <h3>Communication et marketing digital</h3>
+                                <p class="truncate-text">Stratégies digitales innovantes pour renforcer la présence en ligne et l'impact des marques, incluant des campagnes publicitaires, gestion de la marque et optimisation des réseaux sociaux.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="services text-center">
+                              <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-search-engine"></span></div>
+                              <div class="text media-body">
+                                <h3>Personal Branding</h3>
+                                <p class="truncate-text">Construire et développer une image de marque personnelle forte et authentique, en mettant en valeur votre expertise et vos valeurs uniques.</p>
+                              </div>
+                            </div>
+                            <div class="services text-center">
+                              <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-handshake"></span></div>
+                              <div class="text media-body">
+                                <h3>Identité visuelle</h3>
+                                <p class="truncate-text">Création d'une identité visuelle unique qui reflète l'essence de votre marque à travers des logos, des couleurs et des éléments graphiques distinctifs.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                </div>
+            </div>
+        </section>
+   
+        
+        <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_3.jpg);">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+                        <h2 class="mb-0">Vous obtenez toujours les meilleurs conseils</h2>
+                    </div>
+                </div>    
+            </div>
+        </section>
+        
+        <section class="ftco-counter" id="section-counter">
+            <div class="container">
+                <div class="row d-md-flex align-items-center justify-content-center">
+                    <div class="wrapper">
+                        <div class="row d-md-flex align-items-center">
+                            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                                <div class="block-18">
+                                    <div class="icon"><span class="flaticon-doctor"></span></div>
+                                    <div class="text">
+                                        <strong class="number" data-number="705">0</strong>
+                                        <span>Evénements organisés</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                                <div class="block-18">
+                                    <div class="icon"><span class="flaticon-doctor"></span></div>
+                                    <div class="text">
+                                        <strong class="number" data-number="809">0</strong>
+                                        <span>Clients satisfaits</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                                <div class="block-18">
+                                    <div class="icon"><span class="flaticon-doctor"></span></div>
+                                    <div class="text">
+                                        <strong class="number" data-number="335">0</strong>
+                                        <span>Prix reçus</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                                <div class="block-18">
+                                    <div class="icon"><span class="flaticon-doctor"></span></div>
+                                    <div class="text">
+                                        <strong class="number" data-number="35">0</strong>
+                                        <span>Années d'expérience</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="ftco-section testimony-section">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-8 text-center heading-section ftco-animate">
+                        <h2 class="mb-4">Ce que disent nos clients</h2>
+                        <p>Séparés, ils vivent. Un petit fleuve nommé Duden coule près de leur endroit et lui fournit les regelialia nécessaires. C'est un pays paradisiaque</p>
+                    </div>
+                </div>
+                <div class="row ftco-animate justify-content-center">
+                    <div class="col-md-12">
+                        <div class="carousel-testimony owl-carousel">
+                            <div class="item">
+                                <div class="testimony-wrap d-flex">
+                                    <div class="user-img" style="background-image: url(images/person_1.jpg)">
+                                    </div>
+                                    <div class="text pl-4">
+                                        <span class="quote d-flex align-items-center justify-content-center">
+                                            <i class="icon-quote-left"></i>
+                                        </span>
+                                        <p>Au loin, derrière les montagnes de mots, loin des pays Vokalia et Consonantia, vivent les textes aveugles.</p>
+                                        <p class="name">Racky Henderson</p>
+                                        <span class="position">Père</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimony-wrap d-flex">
+                                    <div class="user-img" style="background-image: url(images/person_2.jpg)">
+                                    </div>
+                                    <div class="text pl-4">
+                                        <span class="quote d-flex align-items-center justify-content-center">
+                                            <i class="icon-quote-left"></i>
+                                        </span>
+                                        <p>Au loin, derrière les montagnes de mots, loin des pays Vokalia et Consonantia, vivent les textes aveugles.</p>
+                                        <p class="name">Henry Dee</p>
+                                        <span class="position">Femme d'affaires</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimony-wrap d-flex">
+                                    <div class="user-img" style="background-image: url(images/person_3.jpg)">
+                                    </div>
+                                    <div class="text pl-4">
+                                        <span class="quote d-flex align-items-center justify-content-center">
+                                            <i class="icon-quote-left"></i>
+                                        </span>
+                                        <p>Au loin, derrière les montagnes de mots, loin des pays Vokalia et Consonantia, vivent les textes aveugles.</p>
+                                        <p class="name">Mark Huff</p>
+                                        <span class="position">Femme d'affaires</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimony-wrap d-flex">
+                                    <div class="user-img" style="background-image: url(images/person_4.jpg)">
+                                    </div>
+                                    <div class="text pl-4">
+                                        <span class="quote d-flex align-items-center justify-content-center">
+                                            <i class="icon-quote-left"></i>
+                                        </span>
+                                        <p>Au loin, derrière les montagnes de mots, loin des pays Vokalia et Consonantia, vivent les textes aveugles.</p>
+                                        <p class="name">Rodel Golez</p>
+                                        <span class="position">Femme d'affaires</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="testimony-wrap d-flex">
+                                    <div class="user-img" style="background-image: url(images/person_1.jpg)">
+                                    </div>
+                                    <div class="text pl-4">
+                                        <span class="quote d-flex align-items-center justify-content-center">
+                                            <i class="icon-quote-left"></i>
+                                        </span>
+                                        <p>Au loin, derrière les montagnes de mots, loin des pays Vokalia et Consonantia, vivent les textes aveugles.</p>
+                                        <p class="name">Ken Bosh</p>
+                                        <span class="position">Femme d'affaires</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+   </div>
+</body>
+</html>

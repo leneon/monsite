@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{front-office/layout/auth.html}">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${appName} + ' - ' + ${title}">Site</title>
+    <style>
+        .truncate-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Nombre de lignes à afficher */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .blog-date {
+            font-size: 14px;
+            color: #6c757d; /* Couleur de texte par défaut */
+        }
+        .blog-date i {
+            font-size: 16px;
+        }
+        .blog-date span {
+            margin-left: 4px;
+        }
+        </style>
+    <body >
+    <!-- Content to be injected into the layout's main section -->
+    <div layout:fragment="content" ng-controller="unAuthController">
+        <section class="home-slider owl-carousel">
+            <div class="slider-item" style="background-image:url(images/bg_1.jpg);">
+                <div class="overlay"></div>
+              <div class="container">
+                <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+                <div class="col-md-7 ftco-animate">
+                    <span class="subheading">Bienvenue chez <span>{{structureDto.nom}}</span></span>
+                  <h1 class="mb-4">Nous sommes la meilleure agence de conseil</h1>
+                  <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Nos services</a></p>
+                </div>
+              </div>
+              </div>
+            </div>
+      
+            <div class="slider-item" style="background-image:url(images/bg_2.jpg);">
+                <div class="overlay"></div>
+              <div class="container">
+                <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
+                <div class="col-md-7 ftco-animate">
+                    <span class="subheading">Le talent d’aujourd’hui, le succès du lendemain</span>
+                  <h1 class="mb-4">Nous vous aidons à développer votre entreprise</h1>
+                  <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Nos services</a></p>
+                </div>
+              </div>
+              </div>
+            </div>
+          </section>
+      
+          <section class="ftco-section">
+              <div class="container">
+                  <div class="row d-flex">
+                      <div class="col-md-5 order-md-last wrap-about align-items-stretch">
+                          <div class="wrap-about-border ftco-animate">
+                              <div class="img" style="background-image: url(images/about.jpg); border-radius: 5px;"></div>
+                              <div class="text">
+                                  <h3>Lisez notre histoire de réussite pour vous inspirer</h3>
+                                  <p>Loin, très loin, derrière les montagnes des mots, loin des pays de Vokalia et de Consonantia, vivent les textes aveugles. Séparés, ils vivent à Bookmarksgrove, juste sur la côte de la Sémantique, un grand océan de langues.</p>								<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word.</p>								<p><a href="#" class="btn btn-primary py-3 px-4">Contact us</a></p>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-md-7 wrap-about pr-md-4 ftco-animate">
+                        <h2 class="mb-4">Nos principaux services</h2>
+                        <p class="truncate-text">Nous offrons des solutions sur mesure pour chaque événement, qu'il soit professionnel ou privé, tout en garantissant une communication impactante.</p>
+                        <div class="row mt-5">
+                          <div class="col-lg-6">
+                            <div class="services active text-center">
+                              <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-collaboration"></span></div>
+                              <div class="text media-body">
+                                <h3>Événementiel</h3>
+                                <p class="truncate-text">Organisation et gestion d'événements mémorables pour marquer les esprits. Nous nous chargeons des conférences, séminaires, mariages, festivals et soirées d'entreprise.</p>
+                              </div>
+                            </div>
+                            <div class="services text-center">
+                              <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-analysis"></span></div>
+                              <div class="text media-body">
+                                <h3>Communication et marketing digital</h3>
+                                <p class="truncate-text">Stratégies digitales innovantes pour renforcer la présence en ligne et l'impact des marques, incluant des campagnes publicitaires, gestion de la marque et optimisation des réseaux sociaux.</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-6">
+                            <div class="services text-center">
+                              <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-search-engine"></span></div>
+                              <div class="text media-body">
+                                <h3>Personal Branding</h3>
+                                <p class="truncate-text">Construire et développer une image de marque personnelle forte et authentique, en mettant en valeur votre expertise et vos valeurs uniques.</p>
+                              </div>
+                            </div>
+                            <div class="services text-center">
+                              <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-handshake"></span></div>
+                              <div class="text media-body">
+                                <h3>Identité visuelle</h3>
+                                <p class="truncate-text">Création d'une identité visuelle unique qui reflète l'essence de votre marque à travers des logos, des couleurs et des éléments graphiques distinctifs.</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                  </div>
+              </div>
+          </section>
+              
+          <section class="ftco-intro ftco-no-pb img" style="background-image: url(images/bg_3.jpg);">
+          <div class="container">
+              <div class="row justify-content-center mb-5">
+              <div class="col-md-10 text-center heading-section heading-section-white ftco-animate">
+              <h2 class="mb-0">Vous obtenez toujours les meilleurs conseils</h2>          
+          </div>
+          </div>	
+          </div>
+          </section>
+      
+        <section class="ftco-counter" id="section-counter">
+              <div class="container">
+                  <div class="row d-md-flex align-items-center justify-content-center">
+                      <div class="wrapper">
+                          <div class="row d-md-flex align-items-center">
+                        <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                          <div class="block-18">
+                              <div class="icon"><span class="flaticon-doctor"></span></div>
+                            <div class="text">
+                              <strong class="number" data-number="705">0</strong>
+                              <span>Evénements organisés</span>		              
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                          <div class="block-18">
+                              <div class="icon"><span class="flaticon-doctor"></span></div>
+                            <div class="text">
+                              <strong class="number" data-number="809">0</strong>
+                              <span>Client satisfait</span>		              
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                          <div class="block-18">
+                              <div class="icon"><span class="flaticon-doctor"></span></div>
+                            <div class="text">
+                              <strong class="number" data-number="335">0</strong>
+                              <span>Récompenses reçues</span>		              
+                          </div>
+                          </div>
+                        </div>
+                        <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+                          <div class="block-18">
+                              <div class="icon"><span class="flaticon-doctor"></span></div>
+                            <div class="text">
+                              <strong class="number" data-number="10">0</strong>
+                              <span>Des années d'expérience</span>		              
+                          </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              </div>
+        </section>
+      
+      
+          <section class="ftco-section ftco-no-pb">
+              <div class="container-fluid px-0">
+                  <div class="row no-gutters justify-content-center mb-5">
+              <div class="col-md-7 text-center heading-section ftco-animate">
+              <h2 class="mb-4">Nos projets récents</h2>            
+              <p>Ils vivent séparés. Une petite rivière appelée Duden coule à côté de chez eux et leur fournit les regelialia nécessaires. C'est un pays paradisiaque</p>
+              </div>
+          </div>
+                  <div class="row no-gutters">
+                  <div class="col-md-3">
+                      <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-2.jpg);">
+                          <div class="overlay"></div>
+                          <a href="#" class="btn-site d-flex align-items-center justify-content-center"><span class="icon-subdirectory_arrow_right"></span></a>
+                          <div class="text text-center p-4">
+                              <h3><a href="#">Conception de marque et d'illustration</a></h3>
+                              <span>Conception Web</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-1.jpg);">
+                          <div class="overlay"></div>
+                          <a href="#" class="btn-site d-flex align-items-center justify-content-center"><span class="icon-subdirectory_arrow_right"></span></a>
+                          <div class="col-md-4">
+                              <div class="text text-center p-4">
+                                  <h3><a href="#">Conception de marque et d'illustration</a></h3>
+                                  <span>Création d'identité visuelle et graphisme</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+      
+                  <div class="col-md-3">
+                      <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-3.jpg);">
+                          <div class="overlay"></div>
+                          <a href="#" class="btn-site d-flex align-items-center justify-content-center"><span class="icon-subdirectory_arrow_right"></span></a>
+                          <div class="col-md-4">
+                              <div class="text text-center p-4">
+                                  <h3><a href="#">Personnal Branding</a></h3>
+                                  <span>Construire et valoriser votre image personnelle</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                      <div class="col-md-3">
+                      <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-4.jpg);">
+                          <div class="overlay"></div>
+                          <a href="#" class="btn-site d-flex align-items-center justify-content-center"><span class="icon-subdirectory_arrow_right"></span></a>
+                          <div class="text text-center p-4">
+                              <div class="text text-center p-4">
+                                  <h3><a href="#">Audit de communication</a></h3>
+                                  <span>Analyse et amélioration de vos stratégies de communication</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-5.jpg);">
+                          <div class="overlay"></div>
+                          <a href="#" class="btn-site d-flex align-items-center justify-content-center"><span class="icon-subdirectory_arrow_right"></span></a>
+                          <div class="text text-center p-4">
+                              <h3><a href="#">Conception Web</a></h3>
+                              <span>Création et développement de sites web attractifs et performants</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-6.jpg);">
+                          <div class="overlay"></div>
+                          <a href="#" class="btn-site d-flex align-items-center justify-content-center"><span class="icon-subdirectory_arrow_right"></span></a>
+                          <div class="text text-center p-4">
+                              <h3><a href="#">Marketing interne et externe</a></h3>
+                              <span>Développement et mise en œuvre des stratégies de marketing interne et externe</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-7.jpg);">
+                          <div class="overlay"></div>
+                          <a href="#" class="btn-site d-flex align-items-center justify-content-center"><span class="icon-subdirectory_arrow_right"></span></a>
+                          <div class="text text-center p-4">
+                              <h3><a href="#">Marketing interne et externe</a></h3>
+                              <span>Développement et mise en œuvre des stratégies de marketing interne et externe</span>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-3">
+                      <div class="project img ftco-animate d-flex justify-content-center align-items-center" style="background-image: url(images/project-8.jpg);">
+                          <div class="overlay"></div>
+                          <a href="#" class="btn-site d-flex align-items-center justify-content-center"><span class="icon-subdirectory_arrow_right"></span></a>
+                          <div class="text text-center p-4">
+                              <h3><a href="#">Marketing interne et externe</a></h3>
+                              <span>Développement et mise en œuvre des stratégies de marketing interne et externe</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              </div>
+          </section>
+      
+      
+          <section class="ftco-section ftco-consult ftco-no-pt ftco-no-pb" style="background-image: url(images/bg_5.jpg);" data-stellar-background-ratio="0.5">
+              <div class="overlay"></div>
+              <div class="container">
+                  <div class="row justify-content-end">
+                      <div class="col-md-6 py-5 px-md-5">
+                          <div class="py-md-5">
+                              <div class="heading-section heading-section-white ftco-animate mb-5">
+                                  <h2 class="mb-4">Demander un devis</h2>
+                                  <p>Il était une fois, loin derrière les montagnes de mots, loin des pays de Vokalia et Consonantia, vivaient les textes aveugles.</p>
+                              </div>
+                              <form action="#" class="appointment-form ftco-animate">
+                                  <div class="d-md-flex">
+                                      <div class="form-group">
+                                          <input type="text" class="form-control" placeholder="Prénom">
+                                      </div>
+                                      <div class="form-group ml-md-4">
+                                          <input type="text" class="form-control" placeholder="Nom de famille">
+                                      </div>
+                                  </div>
+                                  <div class="d-md-flex">
+                                      <div class="form-group">
+                                          <div class="form-field">
+                                              <div class="select-wrap">
+                                                  <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                                                  <select name="" id="" class="form-control">
+                                                      <option value="">Sélectionner une orientation</option>
+                                                      <option value="">Finance</option>
+                                                      <option value="">Affaires</option>
+                                                      <option value="">Prêt auto</option>
+                                                      <option value="">Immobilier</option>
+                                                      <option value="">Autres services</option>
+                                                  </select>
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="form-group ml-md-4">
+                                          <input type="text" class="form-control" placeholder="Téléphone">
+                                      </div>
+                                  </div>
+                                  <div class="d-md-flex">
+                                      <div class="form-group">
+                                          <textarea name="" id="" cols="30" rows="2" class="form-control" placeholder="Message"></textarea>
+                                      </div>
+                                      <div class="form-group ml-md-4">
+                                          <input type="submit" value="Demander un devis" class="btn btn-white py-3 px-4">
+                                      </div>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+          </section>
+      
+          <section class="ftco-section bg-light">
+              <div class="container">
+                  <div class="row justify-content-center mb-5 pb-2">
+              <div class="col-md-8 text-center heading-section ftco-animate">
+              <h2 class="mb-4"><span>Recent</span> Blog</h2>
+              <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+              </div>
+          </div>
+                  <div class="row">
+              <div class="col-md-6 col-lg-4 ftco-animate">
+              <div class="blog-entry">
+                  <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('images/image_1.jpg');">
+                                  <div class="meta-date text-center p-2">
+                      <span class="day">26</span>
+                      <span class="mos">June</span>
+                      <span class="yr">2019</span>
+                  </div>
+                  </a>
+                  <div class="text bg-white p-4">
+                  <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
+                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  <div class="d-flex align-items-center mt-4">
+                      <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                      <p class="ml-auto mb-0">
+                          <a href="#" class="mr-2">Admin</a>
+                          <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                      </p>
+                  </div>
+                  </div>
+              </div>
+              </div>
+              <div class="col-md-6 col-lg-4 ftco-animate">
+              <div class="blog-entry">
+                  <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('images/image_2.jpg');">
+                                  <div class="meta-date text-center p-2">
+                      <span class="day">26</span>
+                      <span class="mos">June</span>
+                      <span class="yr">2019</span>
+                  </div>
+                  </a>
+                  <div class="text bg-white p-4">
+                  <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
+                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  <div class="d-flex align-items-center mt-4">
+                      <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                      <p class="ml-auto mb-0">
+                          <a href="#" class="mr-2">Admin</a>
+                          <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                      </p>
+                  </div>
+                  </div>
+              </div>
+              </div>
+              <div class="col-md-6 col-lg-4 ftco-animate">
+              <div class="blog-entry">
+                  <a href="blog-single.html" class="block-20 d-flex align-items-end" style="background-image: url('images/image_3.jpg');">
+                                  <div class="meta-date text-center p-2">
+                      <span class="day">26</span>
+                      <span class="mos">June</span>
+                      <span class="yr">2019</span>
+                  </div>
+                  </a>
+                  <div class="text bg-white p-4">
+                  <h3 class="heading"><a href="#">Finance And Legal Working Streams Occur Throughout</a></h3>
+                  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                  <div class="d-flex align-items-center mt-4">
+                      <p class="mb-0"><a href="#" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+                      <p class="ml-auto mb-0">
+                          <a href="#" class="mr-2">Admin</a>
+                          <a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a>
+                      </p>
+                  </div>
+                  </div>
+              </div>
+              </div>
+          </div>
+              </div>
+          </section>
+      
+          <section class="ftco-section testimony-section">
+            <div class="container">
+              <div class="row justify-content-center mb-5">
+                <div class="col-md-8 text-center heading-section ftco-animate">
+                  <h2 class="mb-4">Our Clients Says</h2>
+                  <p>Separated they live in. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country</p>
+                </div>
+              </div>
+              <div class="row ftco-animate justify-content-center">
+                <div class="col-md-12">
+                  <div class="carousel-testimony owl-carousel">
+                    <div class="item">
+                      <div class="testimony-wrap d-flex">
+                        <div class="user-img" style="background-image: url(images/person_1.jpg)">
+                        </div>
+                        <div class="text pl-4">
+                            <span class="quote d-flex align-items-center justify-content-center">
+                            <i class="icon-quote-left"></i>
+                          </span>
+                          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                          <p class="name">Racky Henderson</p>
+                          <span class="position">Father</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="testimony-wrap d-flex">
+                        <div class="user-img" style="background-image: url(images/person_2.jpg)">
+                        </div>
+                        <div class="text pl-4">
+                            <span class="quote d-flex align-items-center justify-content-center">
+                            <i class="icon-quote-left"></i>
+                          </span>
+                          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                          <p class="name">Henry Dee</p>
+                          <span class="position">Businesswoman</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="testimony-wrap d-flex">
+                        <div class="user-img" style="background-image: url(images/person_3.jpg)">
+                        </div>
+                        <div class="text pl-4">
+                            <span class="quote d-flex align-items-center justify-content-center">
+                            <i class="icon-quote-left"></i>
+                          </span>
+                          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                          <p class="name">Mark Huff</p>
+                          <span class="position">Businesswoman</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="testimony-wrap d-flex">
+                        <div class="user-img" style="background-image: url(images/person_4.jpg)">
+                        </div>
+                        <div class="text pl-4">
+                            <span class="quote d-flex align-items-center justify-content-center">
+                            <i class="icon-quote-left"></i>
+                          </span>
+                          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                          <p class="name">Rodel Golez</p>
+                          <span class="position">Businesswoman</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="testimony-wrap d-flex">
+                        <div class="user-img" style="background-image: url(images/person_1.jpg)">
+                        </div>
+                        <div class="text pl-4">
+                            <span class="quote d-flex align-items-center justify-content-center">
+                            <i class="icon-quote-left"></i>
+                          </span>
+                          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                          <p class="name">Ken Bosh</p>
+                          <span class="position">Businesswoman</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+    </div>
+</body>
+</html>

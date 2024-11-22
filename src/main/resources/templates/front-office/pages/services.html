@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{front-office/layout/auth.html}">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="${appName} + ' - ' + ${title}">Site</title>
+    <style>
+        .truncate-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Nombre de lignes à afficher */
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .blog-date {
+            font-size: 14px;
+            color: #6c757d; /* Couleur de texte par défaut */
+        }
+        .blog-date i {
+            font-size: 16px;
+        }
+        .blog-date span {
+            margin-left: 4px;
+        }
+        </style>
+<body >
+    <div layout:fragment="content" ng-controller="unAuthController">
+        <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');">
+            <div class="overlay"></div>
+            <div class="container">
+              <div class="row no-gutters slider-text align-items-center justify-content-center">
+                <div class="col-md-9 ftco-animate text-center">
+                  <h1 class="mb-2 bread">Services</h1>
+                  <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Accueil <i class="ion-ios-arrow-forward"></i></a></span> <span>Services <i class="ion-ios-arrow-forward"></i></span></p>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section class="ftco-section ftco-no-pb">
+            <div class="container">
+              <div class="row d-flex">
+                <div class="col-md-5 order-md-last wrap-about align-items-stretch">
+                  <div class="wrap-about-border ftco-animate">
+                    <div class="img" style="background-image: url(images/about.jpg); border-radius: 5px;"></div>
+                    <div class="text">
+                      <h3>Lisez notre histoire de succès pour inspiration</h3>
+                      <p>Loin, derrière les montagnes de mots, loin des pays Vokalia et Consonantia, vivent les textes aveugles. Séparés, ils vivent à Bookmarksgrove, juste au bord de la sémantique, un grand océan linguistique.</p>
+                      <p>En chemin, elle rencontra une copie. La copie avertit le petit texte aveugle que là où il venait, il aurait été réécrit mille fois et tout ce qui restait de son origine serait le mot.</p>
+                      <p><a href="#" class="btn btn-primary py-3 px-4">Contactez-nous</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-7 wrap-about pr-md-4 ftco-animate">
+                  <h2 class="mb-4">Nos principaux services</h2>
+                  <p>Nous offrons des solutions sur mesure pour chaque événement, qu'il soit professionnel ou privé, tout en garantissant une communication impactante.</p>
+                  <div class="row mt-5">
+                    <div class="col-lg-6">
+                      <div class="services active text-center">
+                        <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-collaboration"></span></div>
+                        <div class="text media-body">
+                          <h3>Événementiel</h3>
+                          <p class="truncate-text">Organisation et gestion d'événements mémorables pour marquer les esprits.</p>
+                        </div>
+                      </div>
+                      <div class="services text-center">
+                        <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-analysis"></span></div>
+                        <div class="text media-body">
+                          <h3>Communication et marketing digital</h3>
+                          <p class="truncate-text">Stratégies digitales innovantes pour renforcer la présence en ligne et l'impact des marques.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="services text-center">
+                        <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-search-engine"></span></div>
+                        <div class="text media-body">
+                          <h3>Personal Branding</h3>
+                          <p class="truncate-text">Construire et développer une image de marque personnelle forte et authentique.</p>
+                        </div>
+                      </div>
+                      <div class="services text-center">
+                        <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-handshake"></span></div>
+                        <div class="text media-body">
+                          <h3>Identité visuelle</h3>
+                          <p class="truncate-text">Création d'une identité visuelle unique qui reflète l'essence de votre marque.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+          </section>
+          
+          <section class="ftco-section">
+            <div class="container">
+              <div class="row justify-content-center mb-5 pb-2">
+                <div class="col-md-8 text-center heading-section ftco-animate">
+                  <h2 class="mb-4">Nos meilleurs services</h2>
+                  <p>Séparés, ils vivent dans un pays paradisiaque. Un petit fleuve nommé Duden coule près de leur endroit et lui fournit les regelialia nécessaires.</p>
+                </div>
+              </div>
+              <div class="row no-gutters">
+                    <div class="col-lg-4 d-flex">
+                    <div class="services-2 noborder-left text-center ftco-animate">
+                        <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-analysis"></span></div>
+                        <div class="text media-body">
+                        <h3>Commerce général</h3>
+                        <p>Gestion complète des opérations commerciales pour maximiser la performance de votre entreprise.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 d-flex">
+                      <div class="services-2 noborder-left text-center ftco-animate">
+                        <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-analysis"></span></div>
+                        <div class="text media-body">
+                          <h3>Organisation d'événements</h3>
+                          <p>Conférences, séminaires, mariages, festivals, soirées d'entreprise, et bien plus. Nous organisons des événements mémorables et adaptés à vos besoins.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 d-flex">
+                      <div class="services-2 text-center ftco-animate">
+                        <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-business"></span></div>
+                        <div class="text media-body">
+                          <h3>Communication & Marketing</h3>
+                          <p>Nous développons des campagnes publicitaires efficaces, créons des stratégies de communication et gérons la marque pour vous garantir une visibilité optimale.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 d-flex">
+                      <div class="services-2 text-center ftco-animate">
+                        <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-insurance"></span></div>
+                        <div class="text media-body">
+                          <h3>Logistique & Technique</h3>
+                          <p>Offrez à vos événements une logistique parfaite : location d'équipements professionnels (caméras HD, drones, éclairage), gestion de la sonorisation et de l’éclairage, et bien plus.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 d-flex">
+                      <div class="services-2 noborder-left noborder-bottom text-center ftco-animate">
+                        <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-money"></span></div>
+                        <div class="text media-body">
+                          <h3>Design & Décoration</h3>
+                          <p>Création d'ambiances personnalisées pour chaque événement, en fonction de vos besoins et du thème choisi, pour garantir une expérience unique.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-4 d-flex">
+                      <div class="services-2 text-center noborder-bottom ftco-animate">
+                        <div class="icon mt-2 d-flex justify-content-center align-items-center"><span class="flaticon-rating"></span></div>
+                        <div class="text media-body">
+                          <h3>Audit de Communication</h3>
+                          <p>Analyse approfondie de la stratégie de communication de votre entreprise pour optimiser l'impact de vos messages et améliorer votre visibilité.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+              </div>
+              
+          </section>
+          
+    </div>
+</body>
+</html>
